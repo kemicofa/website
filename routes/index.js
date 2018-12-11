@@ -13,7 +13,7 @@ router.post('/email', function(req, res, next){
   const pass     = process.env.PASSWORD;
   const user     = process.env.USER;
   const host     = process.env.HOST;
-
+  const target   = process.env.EMAIL;
   var transporter = nodemailer.createTransport({
     host,
     port: 587,
@@ -28,7 +28,7 @@ router.post('/email', function(req, res, next){
 
   var mailOptions = {
     from: 'notif@kemicofa.io',
-    to: email,
+    to: target,
     subject: `Message from ${firstname} ${lastname} (${emailfrom})`,
     text: message
   };

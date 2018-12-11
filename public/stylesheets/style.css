@@ -1,0 +1,92 @@
+.kemicofa-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: stretch;
+    flex-wrap: wrap;
+}
+
+.card, .card-image > img {
+    max-width: 270px;
+    height: auto;
+}
+
+header > nav.row {
+    margin-bottom: 0;
+}
+
+ul.collection > li.collection-item.avatar {
+    padding-left: 20;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+}
+
+.card > .card-content {
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+blockquote {
+    border-left: 5px solid #81c784;
+    color: #78909c;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+table {
+    background-color: white;
+    margin-bottom: 2em;
+}
+
+main a, main h2, .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating){
+    color: #81c784;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+}
+
+.box-shadow {
+    text-shadow: 0 0 2px black;
+}
+
+#starfield-container, #perlin-container {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 10px 8px black;
+    padding-bottom: 4em;
+    padding-top: 1em;
+}
+
+#speed-container {
+    position: absolute;
+    right: 2em;
+    bottom: 0;
+}
+
+.kemicofa-row {
+    margin-top: 2em;
+}
+
+section.container {
+    margin-top: 5em;
+}
+
+h6 {
+    font-weight: bold;
+}

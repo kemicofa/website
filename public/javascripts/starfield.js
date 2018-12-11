@@ -48,7 +48,7 @@ const starfield = function(sketch){
 
     sketch.setup = function(){
         sketch.frameRate(30);
-        const renderer = sketch.createCanvas(sketch.windowWidth, container.offsetHeight);
+        const renderer = sketch.createCanvas(sketch.windowWidth, container.offsetHeight + 10);
         
         let si = -1;
         window.addEventListener("scroll", function(){
@@ -78,7 +78,6 @@ const starfield = function(sketch){
     }
 
     sketch.windowResized = function(){
-        console.log("called")
-        sketch.resizeCanvas(sketch.windowWidth, container.offsetHeight)
+        sketch.resizeCanvas(sketch.windowWidth, container.offsetHeight + 10)
     }
 }

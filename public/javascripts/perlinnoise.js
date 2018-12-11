@@ -8,7 +8,7 @@ const perlinnoise = function(sketch){
     const container = document.getElementById('perlin-container');
 
     sketch.setup = function(){
-        const renderer = sketch.createCanvas(sketch.windowWidth, container.offsetHeight);
+        const renderer = sketch.createCanvas(sketch.windowWidth, container.offsetHeight + 10);
         renderer.parent("perlin-container");
 
         let si = -1;
@@ -38,8 +38,7 @@ const perlinnoise = function(sketch){
     }
 
     sketch.windowResized = function(){
-        console.log("called")
-        sketch.resizeCanvas(sketch.windowWidth,container.offsetHeight)
+        sketch.resizeCanvas(sketch.windowWidth,container.offsetHeight + 10)
     }
 
     sketch.draw = function(){

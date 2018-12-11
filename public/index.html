@@ -1,6 +1,23 @@
 <html>
   <head>
     <title>kemicofa</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/images/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="manifest" href="/images/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/images/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
@@ -13,7 +30,10 @@
       <nav class="row green lighten-2">
         <div class="nav-wrapper">
           <div class="col s12">
-            <a href="#" class="brand-logo">kemicofa</a>
+            <a href="#" class="brand-logo">
+              <img height="36" width="36" src="/images/logo.png" alt="logo">
+              kemicofa
+            </a>
             <a href="#" data-target="mobile-sidenav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
            </ul>
@@ -146,7 +166,7 @@
               </div>
               <div class="card-content white-text">
                 <span class="card-title">Almedia Internship</span>
-                <pre>2014</pre>
+                <pre>2013</pre>
                 <p>Internship at a serious-game company in Strasbourg, France. I was
                   tasked in redoing their website and ensuring it was responsive.
                 </p>
@@ -391,40 +411,43 @@
       <!-- Modal Structure -->
       <div id="contact-modal" class="modal">
           <div class="modal-content">
-            <h3>Contact Form</h3>
-            <div class="row">
-              <form class="col s12">
-                <div class="row">
-                  <div class="input-field col s6">
-                    <input placeholder="First Name" id="first_name" type="text" class="validate">
-                    <label for="first_name">First Name</label>
-                  </div>
-                  <div class="input-field col s6">
-                    <input placeholder="Last Name" id="last_name" type="text" class="validate">
-                    <label for="last_name">Last Name</label>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="input-field col s12">
-                      <input placeholder="Email" id="email" type="text" class="validate">
-                      <label for="email">Email</label>
-                  </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <textarea placeholder="Message" id="message" class="materialize-textarea validate">
-                        </textarea>
-                        <label for="message">Message</label>
+            <form id="form">
+              <h3>Contact Form</h3>
+              <div class="row">
+                <form class="col s12">
+                  <div class="row">
+                    <div class="input-field col s6">
+                      <input name="firstname" placeholder="First Name" id="first_name" type="text" class="validate">
+                      <label for="first_name">First Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                      <input name="lastname" placeholder="Last Name" id="last_name" type="text" class="validate">
+                      <label for="last_name">Last Name</label>
                     </div>
                   </div>
-              </form>
-            </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                        <input name="email" placeholder="Email" id="email" type="text" class="validate">
+                        <label for="email">Email</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                      <div class="input-field col s12">
+                          <textarea name="message" placeholder="Message" id="message" class="materialize-textarea validate">
+                          </textarea>
+                          <label for="message">Message</label>
+                      </div>
+                    </div>
+                </form>
+              </div>
+            </form>
           </div>
           <div class="modal-footer">
-            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Send</a>
+            <a href="#!" id="send" class="modal-close waves-effect waves-green btn-flat">Send</a>
           </div>
         </div>
     <!-- end -->
+    <script src="./javascripts/kemicofa.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

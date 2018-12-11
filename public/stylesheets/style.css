@@ -1,3 +1,7 @@
+.brand-logo > * {
+    vertical-align: middle;
+}
+
 .kemicofa-row {
     display: flex;
     justify-content: space-around;

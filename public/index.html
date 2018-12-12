@@ -409,45 +409,42 @@
 
     <!-- Invisible elements -->
       <!-- Modal Structure -->
-      <div id="contact-modal" class="modal">
+      <form id="contact-modal" class="modal">
           <div class="modal-content">
-            <form id="form">
               <h3>Contact Form</h3>
               <div class="row">
-                <form class="col s12">
+                <div class="col s12">
                   <div class="row">
                     <div class="input-field col s6">
-                      <input name="firstname" placeholder="First Name" id="first_name" type="text" class="validate">
+                      <input name="firstname" required placeholder="First Name" id="first_name" type="text" class="validate">
                       <label for="first_name">First Name</label>
                     </div>
                     <div class="input-field col s6">
-                      <input name="lastname" placeholder="Last Name" id="last_name" type="text" class="validate">
+                      <input name="lastname" required placeholder="Last Name" id="last_name" type="text" class="validate">
                       <label for="last_name">Last Name</label>
                     </div>
                   </div>
                   <div class="row">
                     <div class="input-field col s12">
-                        <input name="email" placeholder="Email" id="email" type="text" class="validate">
+                        <input name="email" required placeholder="Email" id="email" type="email" class="validate">
                         <label for="email">Email</label>
                     </div>
                   </div>
                   <div class="row">
                       <div class="input-field col s12">
-                          <textarea name="message" placeholder="Message" id="message" class="materialize-textarea validate">
+                          <textarea name="message" required placeholder="Message" id="message" class="materialize-textarea validate">
                           </textarea>
                           <label for="message">Message</label>
                       </div>
                     </div>
-                </form>
+                  </div>
               </div>
-            </form>
           </div>
           <div class="modal-footer">
-            <a href="#!" id="send" class="modal-close waves-effect waves-green btn-flat">Send</a>
+            <button href="#!" id="send" type="submit" class="waves-effect waves-green btn">Send</button>
           </div>
-        </div>
+        </form>
     <!-- end -->
-    <script src="./javascripts/kemicofa.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

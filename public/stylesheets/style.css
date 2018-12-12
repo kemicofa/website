@@ -60,6 +60,10 @@ main a, main h2, .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):
     color: #81c784;
 }
 
+footer a {
+    color: #388e3c;
+}
+
 .contact-container {
     display: flex;
     justify-content: center;

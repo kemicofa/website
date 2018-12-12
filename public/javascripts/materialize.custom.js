@@ -22,9 +22,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 message: data.get('message').trim()
             })
         }).then(res=>{
-            modalInstances[0].close();
+            if(res.ok){
+                M.toast({html: 'Email successfully sent !'})
+                modalInstances[0].close();
+            } else {
+                M.toast({html: 'Uh oh! Email failed to send!'})
+            }
             enableForm()
         }).catch(err=>{
+            M.toast({html: 'Uh oh! Email failed to send!'})
             enableForm()
             console.warn(err.message)
         })

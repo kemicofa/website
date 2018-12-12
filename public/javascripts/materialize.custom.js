@@ -6,9 +6,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const modalInstances = M.Modal.init(modalElems, {});
 
     const form = document.getElementById("contact-modal");
-
+    const send = document.getElementById("send")
     form.addEventListener("submit", function(e){
         e.preventDefault();
+        disableForm();
         const data = new FormData(form);
 
         fetch('/email', {
@@ -22,8 +23,26 @@ document.addEventListener('DOMContentLoaded', function() {
             })
         }).then(res=>{
             modalInstances[0].close();
-        }).catch(err=>console.warn(err.message))
+            enableForm()
+        }).catch(err=>{
+            enableForm()
+            console.warn(err.message)
+        })
 
     })
+
+    function disableForm(){
+        send.disabled = true;
+        for(let i = 0; i < form.elements.length; i++){
+            form.elements[i].readOnly = true;
+        }
+    }
+
+    function enableForm(){
+        send.disabled = false;
+        for(let i = 0; i < form.elements.length; i++){
+            form.elements[i].readOnly = false;
+        }    
+    }
 
 });
